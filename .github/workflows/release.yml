@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Release
         run: |
-          exit 1
+          exit 0
 
   clean-up:
     runs-on: ubuntu-latest

@@ -17,7 +17,7 @@ jobs:
       - name: Semver failure
         if: steps.setsemver.outputs.semver ==  ''
         run: |
-          exit 0
+          exit 1
 
   publish:
     runs-on: ubuntu-latest

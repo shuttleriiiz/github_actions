@@ -9,7 +9,7 @@ jobs:
   semver:
     runs-on: ubuntu-latest
     outputs:
-      semver: "0.0.1"
+      semver: ""
     steps:
       - name: Publish
         run: |

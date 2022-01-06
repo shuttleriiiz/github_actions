@@ -9,15 +9,11 @@ jobs:
   semver:
     runs-on: ubuntu-latest
     outputs:
-      semver: ""
+      semver: "0.0.2"
     steps:
       - name: Semver
         id: setsemver
         run: echo "::set-output name=semver::"
-      - name: Semver failure
-        if: steps.setsemver.outputs.semver ==  ''
-        run: |
-          exit 1
 
   publish:
     runs-on: ubuntu-latest
@@ -26,7 +22,7 @@ jobs:
     steps:
       - name: Publish
         run: |
-          exit 0
+          exit 1
 
   release:
     runs-on: ubuntu-latest

@@ -15,7 +15,7 @@ jobs:
         id: setsemver
         run: echo "::set-output name=semver::"
       - name: Semver failure
-        if: steps.setsemver.outputs.semver
+        if: steps.setsemver.outputs.semver ==  ''
         run: |
           exit 0
 

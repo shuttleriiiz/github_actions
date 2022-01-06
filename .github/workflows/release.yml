@@ -11,7 +11,11 @@ jobs:
     outputs:
       semver: ""
     steps:
-      - name: Publish
+      - name: Semver
+        id: setsemver
+        run: echo "::set-output name=semver::"
+      - name: Semver failure
+        if: steps.setsemver.outputs.semver
         run: |
           exit 0
 
